@@ -59,7 +59,7 @@ static int __init basicChar_init(void){
    printk(KERN_INFO "basicChar: device class registered correctly\n");
 
    basicCharDevice = device_create(basicCharClass, NULL, MKDEV(majorNum, 0), NULL, DEVICE_NAME);
-   if (IS_ERR(charDevice)){              // Clean up if there is an error
+   if (IS_ERR(basicCharDevice)){              // Clean up if there is an error
       class_destroy(basicCharClass);           // Repeated code but the alternative is goto statements
       printk(KERN_ALERT "failed to create the device\n");
       goto ERROR0;
