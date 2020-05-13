@@ -1,0 +1,2 @@
+#Rules file for the char device driver
+KERNEL=="basicChar", SUBSYSTEM=="xxx", MODE="0666"

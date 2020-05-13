@@ -1,0 +1,7 @@
+#see derekmolly.ie site, google it
+#install linux kernel headers
+sudo apt-get update
+apt-cache search linux-headers-$(uname-r)
+
+sudo apt-get install linux-headers-5.xx
+ls /usr/src/linux-headers-5.xx/
